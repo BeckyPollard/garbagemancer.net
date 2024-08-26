@@ -11,12 +11,12 @@ html {
 body {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   height: 100vh;
 }
 
 nav {
+  /* lazy, the layout will break if it goes two-line smaller screen FIX THIS */
   max-width: var(--maxWidth);
   width: 100%;
   color: var(--primary);
@@ -32,8 +32,18 @@ nav#mainNav {
 nav ul{
   display: flex;
 }
+nav#toolsNav {
+}
 nav#toolsNav ul {
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  display: inline-flex;
+  font-size: 1.2rem;
   gap: 1rem;
+  padding: 0 2rem;
+}
+nav#toolsNav ul li {
+  margin-bottom: 2rem;
 }
 nav#toolsNav ul li a{
   border: solid 1px var(--primary);
@@ -58,14 +68,17 @@ main>img {
 }
 section {
   text-align: left;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 section h2 {
   padding-left: 2rem;
   margin-bottom: 2rem;
 }
+section h2:first-of-type {
+  border-bottom: solid 1px var(--primary);
+}
 
-section .grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
   column-gap: 2rem;
@@ -73,29 +86,39 @@ section .grid {
   color: var(--primary);
   padding: 0 2rem;
 }
-section .grid .grid-item {
+.grid .grid-item {
   transition: all .12s ease-in 0s;
   outline: solid 1px #000;
   padding-bottom: 1rem;
   border-radius: 5px;
   overflow: hidden;
 }
-section .grid .grid-item:hover {
+.grid .grid-item:hover {
   outline: solid 1px var(--primary);
 }
-section .grid .grid-item h3 {
+.grid .grid-item h3 {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  line-height: 1.2;
+}
+.grid .grid-item p {
   padding: 0 1rem;
   margin-top: 1rem;
 }
-section .grid .grid-item p {
-  padding: 0 1rem;
-  line-height: 1.5;
-  margin-top: 1rem;
-}
-section .grid .grid-item img {
+.grid .grid-item img {
   width: 100%;
   object-fit: cover;
   overflow: hidden;
   max-height: 200px !important;
   height: 200px !important;
+}
+
+footer {
+  max-width: var(--maxWidth);
+  width: 100%;
+  border-top: solid 1px var(--primary);
+  margin-top: 4rem;
+  padding: 4rem 0;
+  text-align: center;
+  font-family: "tamaConnectType", "Consolas", sans-serif;
 }

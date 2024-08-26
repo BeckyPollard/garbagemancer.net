@@ -15,7 +15,12 @@ html {
 }
 body {
   font-size: 1.6rem;
+  font-weight: 300;
   font-family: "Open Sans", "Consolas", sans-serif;
+  color: var(--primary);
+}
+p {
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
@@ -33,12 +38,19 @@ h1 {
   font-size: 2.2rem;
   line-height: 1.5;
 }
+h1 + p {
+  /* tagline / page desc */
+  padding: 0 2rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  max-width: 600px;
+  text-align: center;
+}
 h2 {
   font-family: "tamaConnectType", "Consolas", sans-serif;
-  color: var(--primary);
   line-height: 1.5;
-  border-bottom: solid 1px var(--primary);
 }
 h3 {
   font-size: 2rem;
+  font-weight: bold;
 }
