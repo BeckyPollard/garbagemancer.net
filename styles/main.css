@@ -1,26 +1,101 @@
 @import './reset.css';
+@import './typography.css';
+
 :root {
   --primary: #00f428;
+  --maxWidth: 800px;
 }
 html {
-  font-size: 62.5%;
+  background: #000;
 }
 body {
-  background: #000;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   height: 100vh;
-  font-size: 1.6rem;
 }
-h1 {
-  text-align: center;
-  font-family: "Press Start 2P", "Consolas", sans-serif;
-  color: var(--primary);
-  font-size: 2rem;
-  line-height: 1.5;
-}
-img {
+
+nav {
+  max-width: var(--maxWidth);
   width: 100%;
+  color: var(--primary);
+  font-family: "tamaConnectType", "Consolas", sans-serif;
+  padding-bottom: 1rem;
+  display: flex;
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+nav#mainNav {
+  border-bottom: solid 1px var(--primary);
+}
+nav ul{
+  display: flex;
+}
+nav#toolsNav ul {
+  gap: 1rem;
+}
+nav#toolsNav ul li a{
+  border: solid 1px var(--primary);
+}
+nav .navActive a {
+  background: var(--primary);
+  color: #000;
+}
+nav ul li a{
+  padding: 0.5rem 1rem;
+}
+
+main {
+  text-align: center;
+  margin-top: 5rem;
+  max-width: var(--maxWidth);
+  width: 100%;
+}
+main>img {
+  width: 100%;
+  max-width: 400px;
+}
+section {
+  text-align: left;
+  margin-top: 4rem;
+}
+section h2 {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+section .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+  color: var(--primary);
+  padding: 0 2rem;
+}
+section .grid .grid-item {
+  transition: all .12s ease-in 0s;
+  outline: solid 1px #000;
+  padding-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+section .grid .grid-item:hover {
+  outline: solid 1px var(--primary);
+}
+section .grid .grid-item h3 {
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+section .grid .grid-item p {
+  padding: 0 1rem;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+section .grid .grid-item img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  max-height: 200px !important;
+  height: 200px !important;
 }

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'tamaConnectType';
+  src: url(../fonts/tamaConnectType.woff2) format('woff2'),
+       url(../fonts/tamaConnectType.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+::selection {
+  color: #000;
+  background:  var(--primary);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Open Sans", "Consolas", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+nav a:hover, nav a:focus {
+  color: #000;
+  background:  var(--primary);
+  border: none;
+  outline: none;
+}
+h1 {
+  font-family: "tamaConnectType", "Consolas", sans-serif;
+  color: var(--primary);
+  font-size: 2.2rem;
+  line-height: 1.5;
+}
+h2 {
+  font-family: "tamaConnectType", "Consolas", sans-serif;
+  color: var(--primary);
+  line-height: 1.5;
+  border-bottom: solid 1px var(--primary);
+}
+h3 {
+  font-size: 2rem;
+}
